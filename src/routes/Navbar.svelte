@@ -1,7 +1,7 @@
 <nav class="navbar is-dark" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
-        <img class="logo" src="favicon.png" alt="The Grimwore of Magic Items and Monsters" />
+        <img class="logo" src="favicon.webp" alt="The Grimwore of Magic Items and Monsters" />
       </a>
     </div>
   
