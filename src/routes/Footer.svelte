@@ -9,12 +9,12 @@
         <a href="/privacy">Privacy Policy</a>
       </p>
       <p>
-        <a href="https://github.com/your-repo" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/Robinwil/the-big-grimoire" target="_blank" rel="noopener noreferrer">
           <span class="icon">
             <i class="fab fa-github"></i>
           </span>
         </a>
-        <a href="https://twitter.com/your-twitter" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com/RobinW1l" target="_blank" rel="noopener noreferrer">
           <span class="icon">
             <i class="fab fa-twitter"></i>
           </span>
