@@ -31,7 +31,7 @@ Welcome to the repository for "The Grimwore of Magic Items and Monsters", a comp
 To get started with this project, clone the repository and install the necessary dependencies.
 
 ```bash
-git clone https://example.com/the-grimwore.git
+git clone [https://example.com/the-grimwore.git](https://github.com/Robinwil/the-grimwore.git)
 cd the-grimwore
 npm install
 ```
