@@ -1,12 +1,17 @@
 <script>
+	import { resolve } from '$app/paths';
+
 	export let entry;
 
 	$: collectionPath = entry.kind === 'item' ? 'magic-items' : 'monsters';
-	$: descriptor = entry.kind === 'item' ? `${entry.category} · ${entry.rarity}` : `${entry.habitat} · ${entry.threat} threat`;
+	$: descriptor =
+		entry.kind === 'item'
+			? `${entry.category} · ${entry.rarity}`
+			: `${entry.habitat} · ${entry.threat} threat`;
 </script>
 
 <article class="entry-card">
-	<a class="entry-card__link" href={`/${collectionPath}/${entry.slug}`}>
+	<a class="entry-card__link" href={resolve(`/${collectionPath}/${entry.slug}`)}>
 		<div class="entry-card__image">
 			<img src={entry.image} alt={entry.imageAlt} loading="lazy" width="640" height="400" />
 		</div>

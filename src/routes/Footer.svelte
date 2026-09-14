@@ -1,19 +1,29 @@
+<script>
+	import { resolve } from '$app/paths';
+</script>
+
 <footer class="site-footer">
 	<div class="page-width footer-grid">
 		<div>
 			<p class="eyebrow">Keep the lantern lit</p>
 			<p class="footer-title">The Big Grimoire</p>
-			<p class="footer-copy">A small, growing archive for people who still leave room for wonder.</p>
+			<p class="footer-copy">
+				A small, growing archive for people who still leave room for wonder.
+			</p>
 		</div>
 
 		<nav aria-label="Footer navigation">
-			<a href="/about">About the archive</a>
-			<a href="/contact">Contact the scribe</a>
-			<a href="/privacy">Privacy notes</a>
+			<a href={resolve('/about')}>About the archive</a>
+			<a href={resolve('/contact')}>Contact the scribe</a>
+			<a href={resolve('/privacy')}>Privacy notes</a>
 		</nav>
 
 		<div class="footer-links">
-			<a href="https://github.com/Robinwil/the-big-grimoire" target="_blank" rel="noopener noreferrer">
+			<a
+				href="https://github.com/Robinwil/the-big-grimoire"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				GitHub<span class="sr-only"> (opens in a new tab)</span>
 			</a>
 			<a href="https://robinwil.com" target="_blank" rel="noopener noreferrer">

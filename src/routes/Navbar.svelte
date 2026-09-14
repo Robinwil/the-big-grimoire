@@ -1,4 +1,6 @@
 <script>
+	import { resolve } from '$app/paths';
+
 	let menuOpen = false;
 
 	function closeMenu() {
@@ -8,7 +10,7 @@
 
 <header class="site-header">
 	<nav class="nav-bar page-width" aria-label="Primary navigation">
-		<a class="brand" href="/" onclick={closeMenu}>
+		<a class="brand" href={resolve('/')} onclick={closeMenu}>
 			<img src="/favicon.webp" alt="" width="48" height="48" />
 			<span>
 				<strong>The Big Grimoire</strong>
@@ -28,15 +30,21 @@
 		</button>
 
 		<div id="site-navigation" class="nav-links" class:open={menuOpen}>
-			<a href="/magic-items" onclick={closeMenu}>Magic items</a>
-			<a href="/monsters" onclick={closeMenu}>Monsters</a>
-			<a href="/about" onclick={closeMenu}>About</a>
-			<a href="/docks" onclick={closeMenu}>Field notes</a>
+			<a href={resolve('/magic-items')} onclick={closeMenu}>Magic items</a>
+			<a href={resolve('/monsters')} onclick={closeMenu}>Monsters</a>
+			<a href={resolve('/about')} onclick={closeMenu}>About</a>
+			<a href={resolve('/docks')} onclick={closeMenu}>Field notes</a>
 		</div>
 
 		<form class="search-form" action="/search" method="get" role="search">
 			<label class="sr-only" for="site-search">Search the grimoire</label>
-			<input id="site-search" name="q" type="search" placeholder="Search entries" autocomplete="off" />
+			<input
+				id="site-search"
+				name="q"
+				type="search"
+				placeholder="Search entries"
+				autocomplete="off"
+			/>
 			<button type="submit" aria-label="Search the grimoire">⌕</button>
 		</form>
 	</nav>

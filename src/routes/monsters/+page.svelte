@@ -19,7 +19,10 @@
 
 <svelte:head>
 	<title>Monsters — The Big Grimoire</title>
-	<meta name="description" content="Meet the strange beasts, patient giants, and wandering spirits in the archive." />
+	<meta
+		name="description"
+		content="Meet the strange beasts, patient giants, and wandering spirits in the archive."
+	/>
 </svelte:head>
 
 <section class="catalog-hero">
@@ -27,8 +30,8 @@
 		<p class="eyebrow">The bestiary</p>
 		<h1>Monsters</h1>
 		<p class="lead">
-			Not every monster wants a fight. Learn the signs, respect the habitat, and read the field notes
-			before you draw a sword.
+			Not every monster wants a fight. Learn the signs, respect the habitat, and read the field
+			notes before you draw a sword.
 		</p>
 	</div>
 </section>
@@ -43,20 +46,21 @@
 			<div>
 				<label for="monster-habitat">Habitat</label>
 				<select id="monster-habitat" bind:value={habitat}>
-					{#each habitatOptions as option}
+					{#each habitatOptions as option (option)}
 						<option value={option}>{option}</option>
 					{/each}
 				</select>
 			</div>
 			<p class="result-count" aria-live="polite">
-				{filteredMonsters.length} {filteredMonsters.length === 1 ? 'entry' : 'entries'}
+				{filteredMonsters.length}
+				{filteredMonsters.length === 1 ? 'entry' : 'entries'}
 			</p>
 		</div>
 
 		<h2 id="monsters-heading" class="sr-only">Monster entries</h2>
 		{#if filteredMonsters.length}
 			<div class="entry-grid">
-				{#each filteredMonsters as entry}
+				{#each filteredMonsters as entry (entry.slug)}
 					<EntryCard {entry} />
 				{/each}
 			</div>

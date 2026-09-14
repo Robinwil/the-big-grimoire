@@ -19,7 +19,10 @@
 
 <svelte:head>
 	<title>Magic items — The Big Grimoire</title>
-	<meta name="description" content="Browse enchanted relics, living tomes, charms, and weapons from the archive." />
+	<meta
+		name="description"
+		content="Browse enchanted relics, living tomes, charms, and weapons from the archive."
+	/>
 </svelte:head>
 
 <section class="catalog-hero">
@@ -27,8 +30,8 @@
 		<p class="eyebrow">The relic shelves</p>
 		<h1>Magic items</h1>
 		<p class="lead">
-			Tools, treasures, and trouble with a little enchantment left in them. Search the shelves or filter
-			by the scribe's field classification.
+			Tools, treasures, and trouble with a little enchantment left in them. Search the shelves or
+			filter by the scribe's field classification.
 		</p>
 	</div>
 </section>
@@ -43,20 +46,21 @@
 			<div>
 				<label for="item-rarity">Rarity</label>
 				<select id="item-rarity" bind:value={rarity}>
-					{#each rarityOptions as option}
+					{#each rarityOptions as option (option)}
 						<option value={option}>{option}</option>
 					{/each}
 				</select>
 			</div>
 			<p class="result-count" aria-live="polite">
-				{filteredItems.length} {filteredItems.length === 1 ? 'entry' : 'entries'}
+				{filteredItems.length}
+				{filteredItems.length === 1 ? 'entry' : 'entries'}
 			</p>
 		</div>
 
 		<h2 id="items-heading" class="sr-only">Magic item entries</h2>
 		{#if filteredItems.length}
 			<div class="entry-grid">
-				{#each filteredItems as entry}
+				{#each filteredItems as entry (entry.slug)}
 					<EntryCard {entry} />
 				{/each}
 			</div>

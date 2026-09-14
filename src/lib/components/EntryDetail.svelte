@@ -1,14 +1,20 @@
 <script>
+	import { resolve } from '$app/paths';
+
 	export let entry;
 
 	$: collectionPath = entry.kind === 'item' ? 'magic-items' : 'monsters';
 	$: collectionName = entry.kind === 'item' ? 'Magic items' : 'Monsters';
 	$: descriptor =
-		entry.kind === 'item' ? `${entry.category} · ${entry.rarity}` : `${entry.habitat} · ${entry.threat} threat`;
+		entry.kind === 'item'
+			? `${entry.category} · ${entry.rarity}`
+			: `${entry.habitat} · ${entry.threat} threat`;
 </script>
 
 <article class="detail page-width">
-	<a class="back-link" href={`/${collectionPath}`}>← Back to {collectionName.toLowerCase()}</a>
+	<a class="back-link" href={resolve(`/${collectionPath}`)}
+		>← Back to {collectionName.toLowerCase()}</a
+	>
 
 	<div class="detail-grid">
 		<figure class="detail-art">
@@ -35,7 +41,7 @@
 
 			<h2>Field marks</h2>
 			<ul class="traits">
-				{#each entry.traits as trait}
+				{#each entry.traits as trait (trait)}
 					<li>{trait}</li>
 				{/each}
 			</ul>

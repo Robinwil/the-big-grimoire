@@ -1,6 +1,9 @@
 <svelte:head>
 	<title>Contact the scribe — The Big Grimoire</title>
-	<meta name="description" content="Share a correction, a story hook, or a bright idea for The Big Grimoire." />
+	<meta
+		name="description"
+		content="Share a correction, a story hook, or a bright idea for The Big Grimoire."
+	/>
 </svelte:head>
 
 <section class="contact-page section">
@@ -17,10 +20,16 @@
 			<h2>Choose your trail</h2>
 			<p>Public corrections and ideas are easiest to follow where the work already lives.</p>
 			<div class="button-row">
-				<a class="button" href="https://github.com/Robinwil/the-big-grimoire/issues">Open an issue</a>
-				<a class="button secondary" href="https://github.com/Robinwil/the-big-grimoire">View the repository</a>
+				<a class="button" href="https://github.com/Robinwil/the-big-grimoire/issues"
+					>Open an issue</a
+				>
+				<a class="button secondary" href="https://github.com/Robinwil/the-big-grimoire"
+					>View the repository</a
+				>
 			</div>
-			<p class="contact-note">Please avoid sharing private or sensitive information in public issues.</p>
+			<p class="contact-note">
+				Please avoid sharing private or sensitive information in public issues.
+			</p>
 		</div>
 	</div>
 </section>

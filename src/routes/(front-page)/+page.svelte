@@ -1,4 +1,5 @@
 <script>
+	import { resolve } from '$app/paths';
 	import EntryCard from '$lib/components/EntryCard.svelte';
 	import { magicItems, monsters } from '$lib/grimoire.js';
 
@@ -19,12 +20,12 @@
 			<p class="eyebrow">A field guide for the curious</p>
 			<h1>Leave room for wonder.</h1>
 			<p class="lead">
-				The Big Grimoire is a growing archive of magic items, monsters, and the stories that make them
-				worth remembering.
+				The Big Grimoire is a growing archive of magic items, monsters, and the stories that make
+				them worth remembering.
 			</p>
 			<div class="button-row">
-				<a class="button" href="/magic-items">Explore magic items</a>
-				<a class="button secondary" href="/monsters">Meet the monsters</a>
+				<a class="button" href={resolve('/magic-items')}>Explore magic items</a>
+				<a class="button secondary" href={resolve('/monsters')}>Meet the monsters</a>
 			</div>
 			<dl class="hero-stats">
 				<div>
@@ -62,11 +63,13 @@
 		</div>
 		<div class="welcome-copy">
 			<p>
-				Search by name, browse by category, or follow a curious detail into the next entry. The archive
-				is intentionally small enough to wander and structured enough to be useful at the table, on the
-				trail, or during a quiet night by the fire.
+				Search by name, browse by category, or follow a curious detail into the next entry. The
+				archive is intentionally small enough to wander and structured enough to be useful at the
+				table, on the trail, or during a quiet night by the fire.
 			</p>
-			<a class="text-link" href="/about">Learn how the archive is kept <span aria-hidden="true">→</span></a>
+			<a class="text-link" href={resolve('/about')}
+				>Learn how the archive is kept <span aria-hidden="true">→</span></a
+			>
 		</div>
 	</div>
 </section>
@@ -78,11 +81,13 @@
 				<p class="eyebrow">Recently illuminated</p>
 				<h2 id="featured-heading">Turn a page</h2>
 			</div>
-			<a class="text-link" href="/search?q=">Browse the whole archive <span aria-hidden="true">→</span></a>
+			<a class="text-link" href={resolve('/search')}
+				>Browse the whole archive <span aria-hidden="true">→</span></a
+			>
 		</div>
 
 		<div class="entry-grid">
-			{#each featuredEntries as entry}
+			{#each featuredEntries as entry (entry.slug)}
 				<EntryCard {entry} />
 			{/each}
 		</div>
@@ -99,7 +104,7 @@
 				unfinished lore, and an invitation to help shape what comes next.
 			</p>
 		</div>
-		<a class="button rust" href="/docks">Read the field notes</a>
+		<a class="button rust" href={resolve('/docks')}>Read the field notes</a>
 	</div>
 </section>
 
@@ -109,7 +114,12 @@
 		overflow: hidden;
 		padding-block: clamp(4rem, 10vw, 8rem);
 		background:
-			linear-gradient(90deg, rgba(23, 21, 26, 0.98) 0%, rgba(23, 21, 26, 0.88) 45%, rgba(23, 21, 26, 0.35)),
+			linear-gradient(
+				90deg,
+				rgba(23, 21, 26, 0.98) 0%,
+				rgba(23, 21, 26, 0.88) 45%,
+				rgba(23, 21, 26, 0.35)
+			),
 			url('/ancient-parchment.webp') center / cover;
 	}
 
@@ -245,8 +255,7 @@
 		border: 1px solid var(--line);
 		border-radius: 0.8rem;
 		background:
-			linear-gradient(120deg, rgba(215, 173, 74, 0.13), transparent 55%),
-			var(--ink-raised);
+			linear-gradient(120deg, rgba(215, 173, 74, 0.13), transparent 55%), var(--ink-raised);
 	}
 
 	.notes-panel h2 {

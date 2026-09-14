@@ -1,13 +1,22 @@
+<script>
+	import { resolve } from '$app/paths';
+</script>
+
 <svelte:head>
 	<title>Privacy notes — The Big Grimoire</title>
-	<meta name="description" content="A plain-language overview of what The Big Grimoire does and does not collect." />
+	<meta
+		name="description"
+		content="A plain-language overview of what The Big Grimoire does and does not collect."
+	/>
 </svelte:head>
 
 <section class="privacy-hero">
 	<div class="page-width">
 		<p class="eyebrow">The quiet page</p>
 		<h1>Privacy notes</h1>
-		<p class="lead">No riddles, no fine-print maze: here is how this little archive handles information.</p>
+		<p class="lead">
+			No riddles, no fine-print maze: here is how this little archive handles information.
+		</p>
 	</div>
 </section>
 
@@ -25,24 +34,24 @@
 			<p class="eyebrow">02</p>
 			<h2>No tracking by default</h2>
 			<p>
-				The application does not set advertising cookies or include an analytics tracker. Search terms
-				are used to show results and are not saved by the app.
+				The application does not set advertising cookies or include an analytics tracker. Search
+				terms are used to show results and are not saved by the app.
 			</p>
 		</article>
 		<article class="privacy-card">
 			<p class="eyebrow">03</p>
 			<h2>Hosting still matters</h2>
 			<p>
-				The service that hosts a deployed copy may keep routine technical logs such as an IP address,
-				timestamp, or browser user agent. Check that provider's policy for its own details.
+				The service that hosts a deployed copy may keep routine technical logs such as an IP
+				address, timestamp, or browser user agent. Check that provider's policy for its own details.
 			</p>
 		</article>
 		<article class="privacy-card">
 			<p class="eyebrow">04</p>
 			<h2>Links leave the archive</h2>
 			<p>
-				Links to GitHub or other sites take you to services with their own practices. We do not control
-				what happens after you follow one.
+				Links to GitHub or other sites take you to services with their own practices. We do not
+				control what happens after you follow one.
 			</p>
 		</article>
 	</div>
@@ -52,8 +61,9 @@
 	<div class="page-width prose">
 		<h2>Questions or corrections?</h2>
 		<p>
-			If the archive changes how it handles information, this page will change with it. For questions,
-			<a href="/contact">contact the scribe</a>.
+			If the archive changes how it handles information, this page will change with it. For
+			questions,
+			<a href={resolve('/contact')}>contact the scribe</a>.
 		</p>
 	</div>
 </section>

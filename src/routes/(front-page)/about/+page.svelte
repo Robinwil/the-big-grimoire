@@ -1,3 +1,7 @@
+<script>
+	import { resolve } from '$app/paths';
+</script>
+
 <svelte:head>
 	<title>About the archive — The Big Grimoire</title>
 	<meta
@@ -12,29 +16,39 @@
 			<p class="eyebrow">About the archive</p>
 			<h1>A grimoire for the road ahead.</h1>
 			<p class="lead">
-				The Big Grimoire keeps the spirit of an old fantasy compendium while making its pages easy to
-				search, share, and add to.
+				The Big Grimoire keeps the spirit of an old fantasy compendium while making its pages easy
+				to search, share, and add to.
 			</p>
 		</div>
-		<img src="/grimwore-illustration.webp" alt="An illustrated page from the Grimwore" width="900" height="700" />
+		<img
+			src="/grimwore-illustration.webp"
+			alt="An illustrated page from the Grimwore"
+			width="900"
+			height="700"
+		/>
 	</div>
 </section>
 
 <section class="section">
 	<div class="page-width story-grid">
-		<img src="/ancient-tome.webp" alt="An ancient tome open on a wooden desk" width="800" height="600" />
+		<img
+			src="/ancient-tome.webp"
+			alt="An ancient tome open on a wooden desk"
+			width="800"
+			height="600"
+		/>
 		<div class="prose">
 			<p class="eyebrow">A living record</p>
 			<h2>Useful first. Enchanted always.</h2>
 			<p>
-				This archive began with a simple affection for magic items, strange creatures, and the feeling
-				of finding a handwritten note in the margin of a well-loved book. Each entry aims to give you
-				enough detail to spark a story without closing the door on your own imagination.
+				This archive began with a simple affection for magic items, strange creatures, and the
+				feeling of finding a handwritten note in the margin of a well-loved book. Each entry aims to
+				give you enough detail to spark a story without closing the door on your own imagination.
 			</p>
 			<p>
-				The catalogue is deliberately growing. Some pages are polished, some are only field notes, and
-				some are waiting for the right detail to arrive. That incompleteness is part of the charm: a
-				grimoire should feel like it has travelled.
+				The catalogue is deliberately growing. Some pages are polished, some are only field notes,
+				and some are waiting for the right detail to arrive. That incompleteness is part of the
+				charm: a grimoire should feel like it has travelled.
 			</p>
 		</div>
 	</div>
@@ -52,17 +66,26 @@
 			<article>
 				<span>01</span>
 				<h3>Make it findable</h3>
-				<p>Clear names, useful categories, and a search that gets out of the way when you know what you seek.</p>
+				<p>
+					Clear names, useful categories, and a search that gets out of the way when you know what
+					you seek.
+				</p>
 			</article>
 			<article>
 				<span>02</span>
 				<h3>Leave room to play</h3>
-				<p>Descriptions offer hooks and possibilities rather than pretending there is only one true story.</p>
+				<p>
+					Descriptions offer hooks and possibilities rather than pretending there is only one true
+					story.
+				</p>
 			</article>
 			<article>
 				<span>03</span>
 				<h3>Keep the lantern lit</h3>
-				<p>Fast pages, readable contrast, and thoughtful defaults make the archive welcoming to more travellers.</p>
+				<p>
+					Fast pages, readable contrast, and thoughtful defaults make the archive welcoming to more
+					travellers.
+				</p>
 			</article>
 		</div>
 	</div>
@@ -75,8 +98,8 @@
 			<h2>What will you find?</h2>
 		</div>
 		<div class="button-row">
-			<a class="button" href="/magic-items">Browse relics</a>
-			<a class="button secondary" href="/monsters">Browse creatures</a>
+			<a class="button" href={resolve('/magic-items')}>Browse relics</a>
+			<a class="button secondary" href={resolve('/monsters')}>Browse creatures</a>
 		</div>
 	</div>
 </section>

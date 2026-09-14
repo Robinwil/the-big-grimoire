@@ -46,7 +46,7 @@
 
 		{#if results.length}
 			<div class="entry-grid">
-				{#each results as entry}
+				{#each results as entry (entry.slug)}
 					<EntryCard {entry} />
 				{/each}
 			</div>

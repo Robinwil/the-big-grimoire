@@ -20,24 +20,25 @@
 				<h2>Start with the detail that refuses to leave you alone.</h2>
 				<p>
 					A good entry rarely starts with a complete biography. It starts with a sound beneath the
-					floorboards, a ring that is warm in winter, or a path that only appears when you stop looking
-					for it.
+					floorboards, a ring that is warm in winter, or a path that only appears when you stop
+					looking for it.
 				</p>
 			</article>
 			<article>
 				<p class="eyebrow">Note 002 · On encounters</p>
 				<h2>Not every monster is an obstacle.</h2>
 				<p>
-					Before deciding what a creature guards, ask what it is protecting. A change in question can
-					turn a battle scene into a bargain, a rescue, or the beginning of an unlikely friendship.
+					Before deciding what a creature guards, ask what it is protecting. A change in question
+					can turn a battle scene into a bargain, a rescue, or the beginning of an unlikely
+					friendship.
 				</p>
 			</article>
 			<article>
 				<p class="eyebrow">Note 003 · On the margins</p>
 				<h2>Leave one blank line for the next traveller.</h2>
 				<p>
-					The archive grows through curiosity. Bring your own interpretation, mark what does not fit,
-					and let the unfinished edges remain invitations rather than errors.
+					The archive grows through curiosity. Bring your own interpretation, mark what does not
+					fit, and let the unfinished edges remain invitations rather than errors.
 				</p>
 			</article>
 		</div>

@@ -3,8 +3,14 @@ import { expect, test } from '@playwright/test';
 test('home page introduces the grimoire and its collections', async ({ page }) => {
 	await page.goto('/');
 	await expect(page.getByRole('heading', { name: 'Leave room for wonder.' })).toBeVisible();
-	await expect(page.getByRole('link', { name: 'Explore magic items' })).toHaveAttribute('href', '/magic-items');
-	await expect(page.getByRole('link', { name: 'Meet the monsters' })).toHaveAttribute('href', '/monsters');
+	await expect(page.getByRole('link', { name: 'Explore magic items' })).toHaveAttribute(
+		'href',
+		'/magic-items'
+	);
+	await expect(page.getByRole('link', { name: 'Meet the monsters' })).toHaveAttribute(
+		'href',
+		'/monsters'
+	);
 });
 
 test('magic item search narrows the catalogue', async ({ page }) => {
@@ -39,5 +45,5 @@ test('mobile navigation can be opened with the keyboard-friendly toggle', async 
 	await expect(menuToggle).toHaveAttribute('aria-expanded', 'false');
 	await menuToggle.click();
 	await expect(menuToggle).toHaveAttribute('aria-expanded', 'true');
-	await expect(page.getByRole('link', { name: 'Field notes' })).toBeVisible();
+	await expect(page.getByRole('link', { name: 'Field notes', exact: true })).toBeVisible();
 });

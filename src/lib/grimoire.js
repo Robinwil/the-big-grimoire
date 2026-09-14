@@ -38,7 +38,11 @@ export const magicItems = [
 			'The ring is cool even beside a fire. Place it beneath your tongue before sleep and a single lost detail returns: a face, a turn in a corridor, or the promise you made before the story began.',
 		image: '/grimwore-illustration.webp',
 		imageAlt: 'A fantastical illustration from the Grimwore archive',
-		traits: ['Recovers one memory nightly', 'Cannot invent what was never known', 'Glows under moonlight'],
+		traits: [
+			'Recovers one memory nightly',
+			'Cannot invent what was never known',
+			'Glows under moonlight'
+		],
 		origin: 'The dream-collectors of Ilyra'
 	},
 	{
@@ -64,7 +68,8 @@ export const monsters = [
 		name: 'Mossback Colossus',
 		habitat: 'Old-growth forest',
 		threat: 'High',
-		summary: 'A gentle giant until its grove is harmed, then a walking avalanche of root and stone.',
+		summary:
+			'A gentle giant until its grove is harmed, then a walking avalanche of root and stone.',
 		description:
 			'Mossback Colossi are older than the roads that cross their territories. They communicate through the slow creak of trees and will guide respectful travellers around danger. Leave an offering of clean water before attempting a conversation.',
 		image: '/fearsome-creature.webp',
