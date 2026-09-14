@@ -1,130 +1,116 @@
 <script>
-    import { onMount } from 'svelte';
-    import { fade } from 'svelte/transition';
-    
-    let ready = false;
-    
-    onMount(() => {
-      ready = true;
-    });
-    </script>
-    
-    <svelte:head>
-      <title>Privacy Policy - The Grimwore</title>
-    </svelte:head>
-    
-    {#if ready}
-      <section class="hero is-fullheight" transition:fade="{{ duration: 1000 }}">
-        <div class="hero-body">
-          <div class="container">
-            <div class="columns is-vcentered">
-              <div class="column is-8 is-offset-2">
-                <h1 class="title is-1">Privacy Policy</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    
-      <section class="section">
-        <div class="container">
-          <div class="columns is-multiline">
-            <div class="column is-6">
-              <div class="card">
-                <div class="card-content">
-                  <h2 class="title is-3">Information We Collect</h2>
-                  <p>
-                    We may collect personal information such as your name, email address, and other contact details when you sign up for our newsletter or contact us directly. We also collect non-personal information, such as your IP address and browser details, for analytical purposes.
-                  </p>
-                </div>
-              </div>
-            </div>
-    
-            <div class="column is-6">
-              <div class="card">
-                <div class="card-content">
-                  <h2 class="title is-3">Use of Information</h2>
-                  <p>
-                    We use the personal information you provide to respond to your inquiries, send you newsletters (if you have subscribed), and improve our services. We may also use non-personal information to analyze website traffic and optimize our content.
-                  </p>
-                </div>
-              </div>
-            </div>
-    
-            <div class="column is-6">
-              <div class="card">
-                <div class="card-content">
-                  <h2 class="title is-3">Data Security</h2>
-                  <p>
-                    We implement reasonable security measures to protect your personal information from unauthorized access, disclosure, misuse, or alteration. However, no method of transmission over the Internet or electronic storage is completely secure, and we cannot guarantee absolute security.
-                  </p>
-                </div>
-              </div>
-            </div>
-    
-            <div class="column is-6">
-              <div class="card">
-                <div class="card-content">
-                  <h2 class="title is-3">Third-Party Links</h2>
-                  <p>
-                    Our website may contain links to third-party websites or services. We are not responsible for the privacy practices or content of these third-party sites. We encourage you to review the privacy policies of those sites before providing any personal information.
-                  </p>
-                </div>
-              </div>
-            </div>
-    
-            <div class="column is-6">
-              <div class="card">
-                <div class="card-content">
-                  <h2 class="title is-3">Changes to This Privacy Policy</h2>
-                  <p>
-                    We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We recommend that you review this Privacy Policy periodically for any changes.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    {/if}
-    
-    <style>
-      .hero {
-        background-image: url('hero-image.png');
-        background-size: cover;
-        background-position: center;
-        color: #f5f5f5;
-      }
-    
-      .title,
-      .subtitle {
-        color: #f5f5f5;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      }
-    
-      .section {
-        background-color: #1a1a1a;
-        color: #f5f5f5;
-        padding: 3rem 1.5rem;
-      }
-    
-      .card {
-        background-color: #2a2a2a;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-        color: #f5f5f59c;
-      }
-    
-      .card:hover {
-        transform: translateY(-5px);
-      }
-    
-      .card-content {
-        padding: 1.5rem;
-      }
-    
-      .card-content .title {
-        color: #d4af37;
-        margin-bottom: 1rem;
-      }
-    </style>
+	import { resolve } from '$app/paths';
+</script>
+
+<svelte:head>
+	<title>Privacy notes — The Big Grimoire</title>
+	<meta
+		name="description"
+		content="A plain-language overview of what The Big Grimoire does and does not collect."
+	/>
+</svelte:head>
+
+<section class="privacy-hero">
+	<div class="page-width">
+		<p class="eyebrow">The quiet page</p>
+		<h1>Privacy notes</h1>
+		<p class="lead">
+			No riddles, no fine-print maze: here is how this little archive handles information.
+		</p>
+	</div>
+</section>
+
+<section class="section">
+	<div class="page-width privacy-grid">
+		<article class="privacy-card">
+			<p class="eyebrow">01</p>
+			<h2>No account required</h2>
+			<p>
+				You can browse the catalogue, use search, and follow links without creating an account or
+				handing over personal details.
+			</p>
+		</article>
+		<article class="privacy-card">
+			<p class="eyebrow">02</p>
+			<h2>No tracking by default</h2>
+			<p>
+				The application does not set advertising cookies or include an analytics tracker. Search
+				terms are used to show results and are not saved by the app.
+			</p>
+		</article>
+		<article class="privacy-card">
+			<p class="eyebrow">03</p>
+			<h2>Hosting still matters</h2>
+			<p>
+				The service that hosts a deployed copy may keep routine technical logs such as an IP
+				address, timestamp, or browser user agent. Check that provider's policy for its own details.
+			</p>
+		</article>
+		<article class="privacy-card">
+			<p class="eyebrow">04</p>
+			<h2>Links leave the archive</h2>
+			<p>
+				Links to GitHub or other sites take you to services with their own practices. We do not
+				control what happens after you follow one.
+			</p>
+		</article>
+	</div>
+</section>
+
+<section class="section privacy-footer">
+	<div class="page-width prose">
+		<h2>Questions or corrections?</h2>
+		<p>
+			If the archive changes how it handles information, this page will change with it. For
+			questions,
+			<a href={resolve('/contact')}>contact the scribe</a>.
+		</p>
+	</div>
+</section>
+
+<style>
+	.privacy-hero {
+		padding-block: clamp(4rem, 9vw, 7rem);
+		background:
+			linear-gradient(90deg, rgba(23, 21, 26, 0.96), rgba(23, 21, 26, 0.76)),
+			url('/ancient-parchment.webp') center / cover;
+	}
+
+	.privacy-hero h1 {
+		margin-bottom: 1rem;
+	}
+
+	.privacy-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.privacy-card {
+		min-height: 14rem;
+		padding: clamp(1.5rem, 4vw, 2.5rem);
+		border: 1px solid rgba(215, 173, 74, 0.2);
+		border-radius: 0.65rem;
+		background: var(--ink-raised);
+	}
+
+	.privacy-card h2 {
+		margin-bottom: 0.75rem;
+		font-size: 1.7rem;
+	}
+
+	.privacy-card p:last-child {
+		margin-bottom: 0;
+		color: var(--parchment-muted);
+	}
+
+	.privacy-footer {
+		padding-top: 0;
+	}
+
+	@media (max-width: 680px) {
+		.privacy-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

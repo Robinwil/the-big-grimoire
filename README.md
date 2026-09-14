@@ -1,37 +1,63 @@
-# The Grimwore of Magic Items and Monsters
+# The Big Grimoire
 
-Welcome to the repository for "The Grimwore of Magic Items and Monsters", a comprehensive fantasy web application dedicated to exploring the mystical world of magic items and creatures. This project aims to provide an immersive and visually captivating experience for enthusiasts of fantasy lore.
+The Big Grimoire is a small, dark-fantasy field guide to magic items, monsters, and the stories between
+them. It keeps the atmosphere of an old compendium while making the archive fast to search and pleasant
+to explore on a phone or a wide screen.
 
-## Project Description
+## What is here?
 
-"The Grimwore of Magic Items and Monsters" is a fantasy wiki that catalogues and describes various magic items and mysterious creatures. Each entry is supplemented with illustrations and detailed information, bringing the fantastical realm to life.
+- A responsive home page with a living archive feel.
+- Searchable magic-item and monster catalogues.
+- Detail pages for every entry, with field marks and provenance.
+- Field notes, archive/about information, and plain-language privacy notes.
+- A local-first UI with no runtime CSS or icon CDN dependencies.
 
-### Design Principles
+## Develop
 
-- **Immersive Atmosphere:** The design evokes a sense of wonder and mystique, transporting users into a world filled with ancient magic and fearsome beasts.
-- **Visual Storytelling:** Utilizes illustrations, icons, and imagery to complement the written lore, enhancing the user's experience.
-- **Accessibility and Readability:** Focuses on clear typography, high contrast, and intuitive navigation to ensure ease of use for all visitors.
-
-### Stylistic Approach
-
-- **Color Palette:** Employs a rich, earthy palette with deep greens, warm browns, and vibrant reds and golds.
-- **Typography:** Features typefaces that evoke antiquity and elegance while maintaining readability.
-- **Iconography and Illustrations:** Central to the design, featuring detailed line work and thematic symbols.
-- **Textures and Patterns:** Uses textures like ancient manuscripts and worn leather to enhance the atmosphere.
-
-## Technical Approach
-
-- **Framework:** Built with Svelte for a modern, performant user experience.
-- **CSS Framework:** Uses Bulma for responsive, modular components.
-- **Responsive Design:** Ensures an optimal experience across various devices and screen sizes.
-- **Accessibility:** Integrates accessibility standards to accommodate users with disabilities.
-
-## Installation
-
-To get started with this project, clone the repository and install the necessary dependencies.
+The project uses Svelte 5, SvelteKit 2, Vite 8, and Bun 1.4.2.
 
 ```bash
-git clone https://example.com/the-big-grimoire.git
-cd the-grimwore
-npm install
+bun install
+bun run dev
 ```
+
+Open `http://localhost:5173` to explore the archive.
+
+If Bun is not available, the checked-in npm lockfile works too:
+
+```bash
+npm install
+npm run dev
+```
+
+## Validate
+
+```bash
+bun run lint
+bun run check
+bun run build
+bun run test
+bun run audit
+```
+
+The Playwright test command builds and serves the production app automatically. `npm run ...` can be used
+instead of `bun run ...` with the npm workflow.
+
+## Project map
+
+```text
+src/
+├── app.css                         # Design tokens and shared visual language
+├── lib/
+│   ├── components/                 # Reusable entry cards and detail views
+│   └── grimoire.js                 # The catalogue data
+└── routes/
+    ├── +layout.svelte              # Shared accessible app shell
+    ├── magic-items/                # Relic catalogue and detail pages
+    ├── monsters/                   # Bestiary and detail pages
+    ├── search/                     # Cross-catalogue search
+    └── (front-page)/               # Home, about, contact, and privacy pages
+```
+
+The content is intentionally easy to extend: add a record to `src/lib/grimoire.js` and the catalogue,
+search, and detail views will use it automatically.
