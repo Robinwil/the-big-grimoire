@@ -9,6 +9,9 @@
 		"node": ">=20.19.0",
 		"bun": ">=1.2.0"
 	},
+	"overrides": {
+		"cookie": "^0.7.2"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
